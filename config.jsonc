@@ -1,0 +1,92 @@
+{
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+    "logo": {
+        "source": "void",
+        "type": "auto",
+        "padding": {
+            "top": 0,
+            "right": 3
+        },
+        "color": {
+            "1": "bright_black"
+        }
+    },
+    "display": {
+        "separator": "  •  ",
+        "color": "blue"
+    },
+    "modules": [
+        "title",
+        {
+            "type": "custom",
+            // Esquinas redondeadas: ╭ y ╮
+            "format": "╭────────────────── Software ──────────────────╮"
+        },
+        {
+            "type": "os",
+            "key": "   OS",
+            "keyColor": "bright_black"
+        },
+        {
+            "type": "kernel",
+            "key": "  󰒋 KER",
+            "keyColor": "bright_black"
+        },
+        {
+            "type": "wm",
+            "key": "  󱂬 WM ",
+            "keyColor": "bright_black"
+        },
+        {
+            "type": "terminal",
+            "key": "  󰆍 TER",
+            "keyColor": "bright_black"
+        },
+        {
+            "type": "custom",
+            "format": "├────────────────── Hardware ──────────────────┤"
+        },
+        {
+            "type": "host",
+            "key": "  󰌢 HST",
+            "keyColor": "bright_black"
+        },
+        {
+            "type": "cpu",
+            "key": "  󰻠 CPU",
+            "keyColor": "bright_black"
+        },
+        {
+            "type": "memory",
+            "key": "  󰍛 RAM",
+            "keyColor": "bright_black"
+        },
+        {
+            "type": "custom",
+            "format": "├──────────────────── Time ────────────────────┤"
+        },
+        {
+            "type": "uptime",
+            "key": "  󱎫 UPT",
+            "keyColor": "bright_black"
+        },
+        {
+            "type": "command",
+            "key": "  󰔚 AGE",
+            "keyColor": "bright_black",
+            "text": "birth=$(stat -c %W /); curr=$(date +%s); diff=$((curr - birth)); echo \"$((diff / 86400)) días, $(( (diff % 86400) / 3600 )) horas\""
+        },
+        {
+            "type": "custom",
+            // Esquinas redondeadas: ╰ y ╯
+            "format": "╰──────────────────────────────────────────────╯"
+        },
+        "break",
+        {
+            "type": "colors",
+            "symbol": "circle",
+            "paddingLeft": 2
+        },
+        "break"
+    ]
+}
