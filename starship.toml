@@ -1,0 +1,18 @@
+# Evita que se cree una línea en blanco molesta al inicio de cada comando
+add_newline = false
+
+# Orden del prompt: directorio (con logo Devuan) + indicador de comandos
+format = "$directory$character"
+
+[directory]
+# El logo de Devuan siempre va primero. $path muestra la casita
+# cuando estás en el home (gracias a home_symbol) o la ruta
+# normal en cualquier otro directorio.
+format = "[\uf307  $path]($style) "
+style = "bold white"
+truncation_length = 1
+home_symbol = "⌂"
+
+[character]
+success_symbol = "[>](bold white)"
+error_symbol = "[>](bold red)"
